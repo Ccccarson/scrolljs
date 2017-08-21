@@ -1,4 +1,4 @@
-
+	$(document).mousemove(function(){return false});
 	var $scorll=function(){
 		this.scorllBox=$('.scorll');//滚动条外盒
 		this.content=$('.wrap');//滚动内容
