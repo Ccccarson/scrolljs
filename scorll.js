@@ -27,7 +27,7 @@
 					newTop=_this.moveS-_this.scorllBarH;
 				}
 				var rate=(newTop+_this.scorllBarH)/_this.moveS;
-				var boxT=Math.ceil(rate*_this.contentH-_this.moveS)-newTop;
+				var boxT=Math.ceil(rate*(_this.contentH-_this.scorllBox.offset().top)-_this.moveS);
 				console.log(boxT)
 				_this.el.css('top',newTop);
 	            _this.content.css('top', -boxT + 'px');
@@ -61,7 +61,7 @@
 			}
 			_this.el.css('top',moveT)
 			var rate=(moveT+_this.scorllBarH)/_this.moveS;
-			var boxT=Math.ceil(rate*_this.contentH-_this.moveS)-moveT;
+			var boxT=Math.floor(rate*(_this.contentH-_this.scorllBox.offset().top)-_this.moveS);
 			_this.content.css('top',-boxT+'px')
 			// console.log(moveT)
 		};
